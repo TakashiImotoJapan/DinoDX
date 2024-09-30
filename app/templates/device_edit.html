@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Device</title>
+</head>
+<body>
+    <h1>Edit Device</h1>
+    <form method="post">
+        <label for="device_number">Device Number:</label>
+        <input type="text" id="device_number" name="device_number" value="{{ device.device_number if device else '' }}"><br>
+
+        <label for="device_name">Device Name:</label>
+        <input type="text" id="device_name" name="device_name" value="{{ device.device_name if device else '' }}"><br>
+
+        <label for="board">Board:</label>
+        <input type="text" id="board" name="board" value="{{ device.board if device else '' }}"><br>
+
+        <label for="os">OS:</label>
+        <input type="text" id="os" name="os" value="{{ device.os if device else '' }}"><br>
+
+        <label for="manager_name">Manager Name:</label>
+        <input type="text" id="manager_name" name="manager_name" value="{{ device.manager_name if device else '' }}"><br>
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

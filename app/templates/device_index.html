@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device List</title>
+</head>
+<body>
+    <h1>Device List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Device Number</th>
+                <th>Device Name</th>
+                <th>Board</th>
+                <th>OS</th>
+                <th>Manager Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for device in devices %}
+            <tr>
+                <td>{{ device.device_number }}</td>
+                <td>{{ device.device_name }}</td>
+                <td>{{ device.board }}</td>
+                <td>{{ device.os }}</td>
+                <td>{{ device.manager_name }}</td>
+                <td>
+                    <a href="/devices/{{ device._id }}/edit">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
